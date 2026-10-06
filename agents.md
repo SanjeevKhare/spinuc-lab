@@ -38,4 +38,5 @@
 
 - Keep `<meta name="robots" content="noindex">` in the head of all six HTML pages, including GitHub and Purdue deployments. Do not remove it without the user's instruction.
 - Do not add robots.txt crawl blocking as a substitute for noindex; search engines need to fetch pages to read that directive. Do not modify domain-wide robots.txt settings on the shared Purdue or personal-site hosts.
-- Abhishek B. Solanki belongs in Alumni and past members as a former postdoctoral researcher. Keep him out of the current postdoctoral group and homepage. Do not invent departure dates or destinations.
+- Abhishek B. Solanki belongs in Alumni and past members as a former Ph.D. student. Keep him out of the current postdoctoral group and homepage. Do not invent departure dates or destinations.
+- Keep the Ph.D. student cards ordered: Sanjeev Khare, Aravindh Shankar, then Sagnik Banerjee. Preserve Sanjeev’s Ph.D. candidate role.
