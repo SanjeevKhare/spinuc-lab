@@ -1,51 +1,20 @@
-# SPINUC Lab
+# Physics Inspired Computing and Sensing (SPINUC)
 
-Website for **SPINUC Lab** (the Upadhyaya Group) at Purdue ECE: magnetism, classical and quantum spintronics, and next-generation information processing.
+Website for **Physics Inspired Computing and Sensing (SPINUC)** (the Upadhyaya Group) at Purdue ECE: magnetism, classical and quantum spintronics, and next-generation information processing.
 
-This is a static site (`index.html` at the repo root). It is meant to be served with [GitHub Pages](https://pages.github.com/).
+This is a static site (`index.html` at the repository root), ready for Purdue Apache hosting and a separate GitHub Pages preview. No build step is required.
 
-## Publish on GitHub Pages
+## GitHub repository and preview
 
-### 1. Create the repository (private first)
+The source repository is [SanjeevKhare/spinuc-lab](https://github.com/SanjeevKhare/spinuc-lab). It is separate from the personal website repository `SanjeevKhare.github.io`; do not change that repository or its domain configuration.
 
-1. On GitHub, create a new repository. Recommended name: `spinuc-lab` (or `USERNAME.github.io` if this should be your account homepage).
-2. Set visibility to **Private**.
-3. Do **not** add a README, `.gitignore`, or license on GitHub (this folder already has them).
-
-Then from this folder:
+Push updates to this repository's `main` branch using the existing GitHub SSH key:
 
 ```bash
-git remote add origin https://github.com/USERNAME/REPO.git
-git push -u origin main
+git push origin main
 ```
 
-### 2. What “private” actually means
-
-- A **private repo** hides the source from the public.
-- A GitHub Pages **URL is public** once Pages is turned on (anyone with the link can open the site), unless you use GitHub Enterprise Cloud access control.
-- On **GitHub Free**, Pages only works from a **public** repository. Keep the repo private while you draft; when you are ready to go live, either:
-  - make the repo **public** and enable Pages, or
-  - keep it private and enable Pages if you have **GitHub Pro** (personal) or **GitHub Team** (org). The live site is still public.
-
-### 3. Turn on Pages when you are ready
-
-1. Repo → **Settings** → **Pages**.
-2. **Build and deployment** → Source: **Deploy from a branch**.
-3. Branch: `main`, folder: `/ (root)`.
-4. Save.
-
-After a minute or two the site is at:
-
-| Repo name | URL |
-| --- | --- |
-| `USERNAME.github.io` | `https://USERNAME.github.io/` |
-| Any other name (project site) | `https://USERNAME.github.io/REPO/` |
-
-If you use a project site (`…/spinuc-lab/`), relative links in this repo already work. Do not put the site in a `/docs` subfolder unless you also change the Pages folder setting.
-
-### 4. Later: make the repo public
-
-Settings → **Danger Zone** → **Change repository visibility** → **Public**. The Pages URL stays the same.
+To enable a browser preview, open this repository's **Settings → Pages**, select **Deploy from a branch**, and choose **main / (root)**. Once GitHub completes deployment, the project preview is `https://sanjeevkhare.github.io/spinuc-lab/`. The current GitHub Pages address redirects to `https://sanjeevkhare.com/spinuc-lab/` through the account's existing custom domain. This project path is separate from the personal homepage. Check the deployment status before sharing the preview. Keep relative links and do not add a `CNAME` file for the personal website's domain.
 
 ## Local preview
 
@@ -64,3 +33,22 @@ All six HTML pages include their own accessible navigation and footer. Keep thos
 The publication source array remains in `assets/js/publications.js`. Its renderer supports combined title/author/journal search, year and topic filters, and chronological sorting. Citation counts in the source are historical snapshots and are not displayed as live metrics. Review imported bibliographic records before publishing; this design update does not verify their accuracy or the current group roster.
 
 Before publishing, preview all pages at desktop and phone widths, check keyboard navigation and the publication controls, and confirm local links and image paths. See `agents.md` for contributor instructions.
+
+## Purdue branding and hosting
+
+See `BRANDING.md` for official sources, logo provenance, typography licensing, and the review boundary. The full group name is Physics Inspired Computing and Sensing; SPINUC is its acronym. The university logo and group title are separate identity elements. All six pages include the university masthead and policy footer.
+
+For Purdue Apache/General hosting, upload the HTML pages and `assets/` directory to the public website folder provided by Purdue IT. Keep the folder structure intact. Purdue-hosted fonts activate on Purdue domains; local and GitHub previews use system fallback fonts. `index.html` is the entry page. No build tool, database, or server-side runtime is needed.
+
+## Provisioned ECN Apache site
+
+- Public URL: https://engineering.purdue.edu/Spinuc/
+- SSH host: `min.ecn.purdue.edu`
+- Hosting account: `spinuc`
+- Account directory supplied by ECN: `/web/groups/Spinuc`
+
+Inspect existing tmux sessions on the host before starting remote work, and reconnect when appropriate. Run remote work in tmux. Keep passwords and private keys out of this repository.
+
+ECN's [Apache hosting instructions](https://service.purdue.edu/TDClient/32/Purdue/KB/Article/2025/Managing-and-Maintaining-a-Personal-or-Group-Apache-Server) show group sites serving from a `public_html` subdirectory. Inspect `/web/groups/Spinuc` and confirm the document root with ECN before uploading; for the documented layout it is `/web/groups/Spinuc/public_html`. Preserve the existing `private` and `var` directories. Back up any existing site files before replacing them.
+
+Upload the six HTML pages and the `assets/` directory directly into the confirmed document root, then verify the live pages, images, mobile menu, publication filters, and Purdue font loading. Repository documentation and raw bibliography import files do not need to be uploaded to Apache.
