@@ -1,5 +1,8 @@
 /* Navigation is in HTML so every page remains usable without JavaScript. */
 document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("[data-copyright-year]").forEach((el) => {
+        el.textContent = new Date().getFullYear();
+    });
     const toggle = document.querySelector(".nav-toggle");
     const list = document.querySelector(".nav-links");
     if (!toggle || !list) return;
@@ -18,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     document.addEventListener("click", (event) => {
-        if (!event.target.closest(".nav")) setOpen(false);
+        if (!event.target.closest(".site-header")) setOpen(false);
     });
     list.addEventListener("click", (event) => {
         if (event.target.closest("a")) setOpen(false);
