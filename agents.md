@@ -26,3 +26,10 @@
 - Publish only to `SanjeevKhare/spinuc-lab`. Do not change `SanjeevKhare.github.io`, its domain settings, or its Pages configuration.
 - Keep passwords and private keys out of Git. Use the existing SSH key for GitHub pushes.
 - Inspect the ECN account directory to confirm the Apache document root before upload; the documented group layout uses `/web/groups/Spinuc/public_html`. Preserve `private`, `var`, and any existing site until backed up.
+
+## ECN deployment permissions
+
+- Confirmed public document root: `/web/groups/Spinuc/public_html`; deployed site: https://engineering.purdue.edu/Spinuc/.
+- The user approved mode `0710` on `/web/groups/Spinuc` and `public_html` so the configured `ecnuser` group can traverse the website path. Mode `0700` caused Apache AH00035 / HTTP 403; do not overwrite the working modes during deployment. This group is shared, so do not broaden its permissions further without authorization.
+- Keep `/web/groups/Spinuc/private` owner-only (`0700`). Do not grant group writes or directory listing on the two site path directories, and do not edit ECN's generated Apache configuration.
+- Use the existing `spinuc-site` tmux session through the `khare9` login, operating in the authenticated `spinuc` shell. Verify live HTTP responses and file hashes after uploads.

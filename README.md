@@ -52,3 +52,13 @@ Inspect existing tmux sessions on the host before starting remote work, and reco
 ECN's [Apache hosting instructions](https://service.purdue.edu/TDClient/32/Purdue/KB/Article/2025/Managing-and-Maintaining-a-Personal-or-Group-Apache-Server) show group sites serving from a `public_html` subdirectory. Inspect `/web/groups/Spinuc` and confirm the document root with ECN before uploading; for the documented layout it is `/web/groups/Spinuc/public_html`. Preserve the existing `private` and `var` directories. Back up any existing site files before replacing them.
 
 Upload the six HTML pages and the `assets/` directory directly into the confirmed document root, then verify the live pages, images, mobile menu, publication filters, and Purdue font loading. Repository documentation and raw bibliography import files do not need to be uploaded to Apache.
+
+## Verified Purdue deployment
+
+The website is live at [engineering.purdue.edu/Spinuc/](https://engineering.purdue.edu/Spinuc/). Its confirmed document root is `/web/groups/Spinuc/public_html`.
+
+The initial owner-only directory modes caused Apache error AH00035 and HTTP 403. The approved working configuration gives the configured `ecnuser` group traversal only: `/web/groups/Spinuc` and `public_html` use mode `0710`. Keep `private` at `0700`; files inside the public document root are `0644`, and asset subdirectories permit traversal. Do not reset the two public path directories to `0700` during uploads. Their group is shared, so group traversal also permits access to other known readable paths under the parent; it does not grant directory listing or writes.
+
+Login as `khare9` on `min.ecn.purdue.edu`, reconnect to the `spinuc-site` tmux session, and use the `spinuc` shell for website updates. Keep credentials out of Git. Preserve ECN's generated Apache configuration.
+
+Deployment verification checked all 20 public files for HTTP 200 and matching content hashes, all six page layouts at desktop and mobile widths, mobile-menu Escape behavior, combined publication filters, and Purdue-domain font stylesheet activation. This is deployment validation, not formal university brand/accessibility approval.
