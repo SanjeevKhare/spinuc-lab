@@ -26,7 +26,3 @@
 - Publish only to `SanjeevKhare/spinuc-lab`. Do not change `SanjeevKhare.github.io`, its domain settings, or its Pages configuration.
 - Keep passwords and private keys out of Git. Use the existing SSH key for GitHub pushes.
 - Inspect the ECN account directory to confirm the Apache document root before upload; the documented group layout uses `/web/groups/Spinuc/public_html`. Preserve `private`, `var`, and any existing site until backed up.
-
-## Contact preferences
-
-- Do not publish Prof. Pramey Upadhyaya's phone number or telephone links. Use the approved email contact instead, even if a number is listed in a public directory.
