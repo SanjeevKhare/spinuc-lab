@@ -62,3 +62,7 @@ The initial owner-only directory modes caused Apache error AH00035 and HTTP 403.
 Login as `khare9` on `min.ecn.purdue.edu`, reconnect to the `spinuc-site` tmux session, and use the `spinuc` shell for website updates. Keep credentials out of Git. Preserve ECN's generated Apache configuration.
 
 Deployment verification checked all 20 public files for HTTP 200 and matching content hashes, all six page layouts at desktop and mobile widths, mobile-menu Escape behavior, combined publication filters, and Purdue-domain font stylesheet activation. This is deployment validation, not formal university brand/accessibility approval.
+
+## Search visibility
+
+All six pages include `<meta name="robots" content="noindex">` in the HTML head. This requests exclusion from Google, Bing, and other search engines that honor the directive. Pages remain publicly accessible; noindex is not access control. Existing search listings can take time to disappear after a crawler revisits the page. Keep crawling enabled so engines can see the directive; do not block these pages using robots.txt. See [Google's noindex documentation](https://developers.google.com/search/docs/crawling-indexing/block-indexing).

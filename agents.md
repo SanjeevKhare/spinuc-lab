@@ -33,3 +33,9 @@
 - The user approved mode `0710` on `/web/groups/Spinuc` and `public_html` so the configured `ecnuser` group can traverse the website path. Mode `0700` caused Apache AH00035 / HTTP 403; do not overwrite the working modes during deployment. This group is shared, so do not broaden its permissions further without authorization.
 - Keep `/web/groups/Spinuc/private` owner-only (`0700`). Do not grant group writes or directory listing on the two site path directories, and do not edit ECN's generated Apache configuration.
 - Use the existing `spinuc-site` tmux session through the `khare9` login, operating in the authenticated `spinuc` shell. Verify live HTTP responses and file hashes after uploads.
+
+## Search visibility and roster
+
+- Keep `<meta name="robots" content="noindex">` in the head of all six HTML pages, including GitHub and Purdue deployments. Do not remove it without the user's instruction.
+- Do not add robots.txt crawl blocking as a substitute for noindex; search engines need to fetch pages to read that directive. Do not modify domain-wide robots.txt settings on the shared Purdue or personal-site hosts.
+- Abhishek B. Solanki belongs in Alumni and past members as a former postdoctoral researcher. Keep him out of the current postdoctoral group and homepage. Do not invent departure dates or destinations.
