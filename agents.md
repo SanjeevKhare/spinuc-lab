@@ -39,5 +39,6 @@
 - Keep `<meta name="robots" content="noindex">` in the head of all six HTML pages, including GitHub and Purdue deployments. Do not remove it without the user's instruction.
 - Do not add robots.txt crawl blocking as a substitute for noindex; search engines need to fetch pages to read that directive. Do not modify domain-wide robots.txt settings on the shared Purdue or personal-site hosts.
 - Abhishek B. Solanki belongs in Alumni and past members as a former Ph.D. student. Keep him out of the current postdoctoral group and homepage. Do not invent departure dates or destinations.
-- Keep the Ph.D. student cards ordered: Sanjeev Khare, Aravindh Shankar, then Sagnik Banerjee. Preserve Sanjeev’s Ph.D. candidate role.
+- Keep the Ph.D. student cards ordered: Sanjeev Khare, Aravindh Shankar, then Sagnik Banerjee. Preserve Sanjeev’s and Aravindh’s Ph.D. candidate roles.
 - Shiva’s People card uses his supplied research text and the degree bullet “PhD, Physics, Purdue (2024).” His public email is skonakan@purdue.edu (Purdue Physics course directory). Use the approved 2026 headshot on both homepage and People page; export a compressed, metadata-free portrait crop without altering the subject.
+- Sanjeev’s profile biography is grounded in his supplied résumé: computational condensed-matter physics, scientific ML/HPC, chiral antiferromagnets, ferroelectric phase-field models, moiré micromagnetics, and prior ISRO GaN/RF work. Do not add unsourced achievements or performance claims.
