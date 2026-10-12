@@ -32,7 +32,7 @@
 - Confirmed public document root: `/web/groups/Spinuc/public_html`; deployed site: https://engineering.purdue.edu/Spinuc/.
 - A prior user-approved mode `0710` traversal fix resolved Apache AH00035 / HTTP 403. On the subsequent noindex/alumni deployment, `public_html` was observed at `0700` and served all six pages successfully. Preserve the current functioning server permissions during content updates; do not automatically reapply the historical fix. The `ecnuser` group is shared, so do not broaden access without authorization.
 - Keep `/web/groups/Spinuc/private` owner-only (`0700`). Do not grant group writes or directory listing on the two site path directories, and do not edit ECN's generated Apache configuration.
-- Use the existing `spinuc-site` tmux session through the `khare9` login, operating in the authenticated `spinuc` shell. Verify live HTTP responses and file hashes after uploads.
+- Direct key-based SSH to `spinuc@min.ecn.purdue.edu` is verified using Sanjeev’s existing `~/.ssh/id_ed25519` key. Only its public key is installed in the group account; never copy private keys. Inspect and reuse the group-owned `spinuc-deploy` tmux session for remote work. The older `spinuc-site` session through `khare9` remains a fallback. Verify live HTTP responses and file hashes after uploads.
 
 ## Search visibility and roster
 
