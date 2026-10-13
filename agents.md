@@ -42,3 +42,4 @@
 - Keep the Ph.D. student cards ordered: Sanjeev Khare, Aravindh Shankar, then Sagnik Banerjee. Preserve Sanjeev’s and Aravindh’s Ph.D. candidate roles.
 - Shiva’s People card uses his supplied research text and the degree bullet “PhD, Physics, Purdue (2024).” His public email is skonakan@purdue.edu (Purdue Physics course directory). Use the approved 2026 headshot on both homepage and People page; export a compressed, metadata-free portrait crop without altering the subject.
 - Sanjeev’s profile biography is grounded in his supplied résumé: computational condensed-matter physics, scientific ML/HPC, chiral antiferromagnets, ferroelectric phase-field models, moiré micromagnetics, and prior ISRO GaN/RF work. Do not add unsourced achievements or performance claims.
+- Sanjeev’s approved portrait is `assets/img/people/sanjeev-khare-2026.jpg`, supplied as `mypic_Crop.jpg`. Use it on both homepage and People page; preserve the supplied crop and subject.
